@@ -29,7 +29,7 @@ jobs:
     #- name: Compile Somma.java
       #run: javac Somma/src/Somma.java
       
-    - name: Download Randoop
+    - name: Download Randoop and Emma
       run: |
             wget https://github.com/randoop/randoop/releases/download/v3.0.6/randoop-all-3.0.6.jar -P /home/runner/work/ParallelRandomTesting/ParallelRandomTesting
             wget https://sourceforge.net/projects/emma/files/emma-release/2.0.5312/emma-2.0.5312.zip -P /home/runner/work/ParallelRandomTesting/ParallelRandomTesting
@@ -65,7 +65,7 @@ jobs:
         path: /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_?
         
         
-  #Job che si attiva al termine dei test
+  #Job che si attiva al termine di tutte le sessioni di test
   
   merge:
    needs: tests
@@ -84,8 +84,8 @@ jobs:
       with:
        name: Emma reports
        
-    - name: Prova
-      run: ls
+    - name: Download Emma
+      run: wget https://sourceforge.net/projects/emma/files/emma-release/2.0.5312/emma-2.0.5312.zip -P /home/runner/work/ParallelRandomTesting/ParallelRandomTesting
       
     - name: Unzip Emma
       run: unzip /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/emma-2.0.5312.zip -d /home/runner/work/ParallelRandomTesting/ParallelRandomTesting
@@ -108,7 +108,7 @@ jobs:
             
             cp /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$((count))/coverage_$((count)).es /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coveragemerge.es
  
-            
+            #Emma report finale
             java -classpath /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/emma-2.0.5312/lib/emma.jar emma report -r html  -Dreport.html.out.file=/home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coveragemerge/coveragemerge.html  -in /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coveragemerge.es
             
             cp /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$((count))/coverage_$((count)).es /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coveragemerge/coveragemerge.es
