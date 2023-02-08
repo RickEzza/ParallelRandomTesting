@@ -32,7 +32,7 @@ jobs:
     - name: Download Randoop
       run: |
             wget https://github.com/randoop/randoop/releases/download/v3.0.6/randoop-all-3.0.6.jar -P /home/runner/work/ParallelRandomTesting/ParallelRandomTesting
-            wget https://sourceforge.net/projects/emma/files/emma-release/2.0.5312/emma-2.0.5312-src.zip/download -P /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/emma-2.0.5312.zip
+            wget https://sourceforge.net/projects/emma/files/emma-release/2.0.5312/emma-2.0.5312-src.zip/download -P /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/emma-2.0.5312
       
     - name: Unzip Emma
       run: unzip /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/emma-2.0.5312.zip -d /home/runner/work/ParallelRandomTesting/ParallelRandomTesting
