@@ -1,12 +1,11 @@
 # RANDOM PARALLEL TESTING   
 ## USING RANDOOP AND EMMA
 
-GitHub Actions per testare in parallelo randomicamente classi java utilizzando randoop per la generazione dei test ed Emma per ottenere il report sulla coverage
+GitHub Actions per il testing parallelo randomico di classi java utilizzando randoop per la generazione dei test ed Emma per ottenere il report sulla coverage.
 
 ## Utilizzo
 
-- Clona la repository.
-- Carica il file .jar nella repository clonata all' interno della directory "jars".
+- Carica il file .jar nella repository all' interno della directory "jars".
 - Modifica il file "lista.txt" inserendo il nome delle classi da testare.
 - Modifica lo script main.yml inserendo appositamente il nome del progetto da testare in Emma instr(rigo 46) e in Randoop(rigo 49). 
 
