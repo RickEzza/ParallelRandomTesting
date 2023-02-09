@@ -8,13 +8,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        # Set N number of parallel jobs you want to run tests on.
-        # Use higher number if you have slow tests to split them on more parallel jobs.
-        # Remember to update ci_node_index below to 0..N-1
         ci_node_total: [8]
         
-        # set N-1 indexes for parallel jobs
-        # When you run 2 parallel jobs then first job will have index 0, the second job will have index 1 etc
         ci_node_index: [0, 1, 2, 3, 4, 5, 6, 7]
         
     steps:
@@ -25,13 +20,11 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-
-    #- name: Compile Somma.java
-      #run: javac Somma/src/Somma.java
       
     - name: Download Randoop and Emma
       run: |
             wget https://github.com/randoop/randoop/releases/download/v3.0.6/randoop-all-3.0.6.jar -P /home/runner/work/ParallelRandomTesting/ParallelRandomTesting
+            
             wget https://sourceforge.net/projects/emma/files/emma-release/2.0.5312/emma-2.0.5312.zip -P /home/runner/work/ParallelRandomTesting/ParallelRandomTesting
       
     - name: Unzip Emma
@@ -50,11 +43,12 @@ jobs:
 
             #Randoop
             java -noverify -classpath /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$timestamp/lib/saxpath.jar:/home/runner/work/ParallelRandomTesting/ParallelRandomTesting/emma-2.0.5312/lib/emma.jar:/home/runner/work/ParallelRandomTesting/ParallelRandomTesting/randoop-all-3.0.6.jar randoop.main.Main gentests --classlist=/home/runner/work/ParallelRandomTesting/ParallelRandomTesting/lista.txt --timelimit=20 --no-regression-tests=true --junit-output-dir=/home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$timestamp
+            
             cp coverage.ec /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$timestamp/coverage_$timestamp.ec
             rm coverage.ec
+            
             #Emma report
             java -classpath /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/emma-2.0.5312/lib/emma.jar emma report -r html  -Dreport.html.out.file=/home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$timestamp/coverage_$timestamp.html  -in /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$timestamp/coverage_$timestamp.em,/home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$timestamp/coverage_$timestamp.ec
-            
             
             #Emma merge .em e .ec
             java -classpath /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/emma-2.0.5312/lib/emma.jar emma merge -in  /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$timestamp/coverage_$timestamp.em,/home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$timestamp/coverage_$timestamp.ec -out /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$timestamp/coverage_$timestamp.es
@@ -98,13 +92,14 @@ jobs:
             for file in /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_?/*.es
             do
              count2=$(($count+1))
+             
              FILE=coverage_$count2/coverage_$count2.es
-              if test -f "$FILE"; then
+             if test -f "$FILE"; then
 
                   java -classpath /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/emma-2.0.5312/lib/emma.jar emma merge -in coverage_$count/coverage_$count.es,coverage_$count2/coverage_$count2.es -out coverage_$count2/coverage_$count2.es
-                  count=$(($count+1))
                   
-              fi
+                  count=$(($count+1)) 
+             fi
             done
             
             cp /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$((count))/coverage_$((count)).es /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coveragemerge.es
