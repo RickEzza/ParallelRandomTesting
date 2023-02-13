@@ -115,11 +115,17 @@ jobs:
         name: Coverage merge
         path: /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coveragemerge/*
   badge:
+    needs: merge
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+      
+    - name: Download a single artifact
+      uses: actions/download-artifact@v3
+      with:
+       name: Coverage merge
 
     - name: Extract Coverage
       run: |
