@@ -106,7 +106,7 @@ jobs:
  
             #Emma report finale
             java -classpath /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/emma-2.0.5312/lib/emma.jar emma report -r html  -Dreport.html.out.file=/home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coveragemerge/coveragemerge.html  -in /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coveragemerge.es
-            
+            java -classpath /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/emma-2.0.5312/lib/emma.jar emma report -r txt  -Dreport.txt.out.file=/home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coveragemerge/coveragemerge.txt  -in /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coveragemerge.es
             cp /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$((count))/coverage_$((count)).es /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coveragemerge/coveragemerge.es
             
     - name: Upload Emma reports
