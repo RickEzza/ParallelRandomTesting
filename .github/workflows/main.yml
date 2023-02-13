@@ -135,7 +135,7 @@ jobs:
     - name: Coverage
       run: |
             #!/bin/bash
-            value= $(grep -oP '(<td class="h">)*(</td>)' coveragemerge.html | sed -n 1p)
+            value= $(grep -oP '(<td class="h">)/K.*?(?=</td>)' coveragemerge.html | sed -n 1p)
             echo $value
             
       
