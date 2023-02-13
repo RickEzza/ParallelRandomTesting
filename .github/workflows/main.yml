@@ -137,6 +137,14 @@ jobs:
             #!/bin/bash
             #value= $(grep -oP '(<td class="h">).*(</td>)' coveragemerge.html | sed -n 2p)
             value=$(grep -oP '(<td class="h"> )\K\d+' coveragemerge.html | sed -n 2p)
-            echo $((value))
+            echo $value
+            
+    - name: Commit and push changes
+      uses: EndBug/action-push-file@v1
+      with:
+        filename: coveragemerge.html
+        branch: main
+        commit_message: "feat: Generate HTML page"
+        force: true
             
       
