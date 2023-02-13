@@ -136,5 +136,5 @@ jobs:
       run: |
             #!/bin/bash
             value= $(grep -oP '(<td class="h">).*(</td>)' coveragemerge.html | sed -n 2p)
-            echo $value
+            echo '$value'
       
