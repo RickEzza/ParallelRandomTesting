@@ -133,7 +133,7 @@ jobs:
             #value= $(grep -oP '(<td class="h">).*(</td>)' coveragemerge.html | sed -n 2p)
             value=$(grep -oP '(<td class="h"> )\K\d+' coveragemerge.html | sed -n 2p)
             echo $value
-            sed "/<td class="h">/,/<\/td>/p" coveragemerge.html
+            sed "/<TD CLASS="h">/,/<\/TD>/p" coveragemerge.html
 
             
 
