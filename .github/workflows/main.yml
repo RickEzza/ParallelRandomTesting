@@ -138,7 +138,7 @@ jobs:
       id: emma
       uses: madrapps/jacoco-report@v1.1
       with:
-        path: ${{ github.workspace }}/build/reports/jacoco/testCoverage/testCoverage.xml
+        path: coveragemerge.html
         token: ${{ secrets.GITHUB_TOKEN }}
         min-coverage-overall: 40
         min-coverage-changed-files: 60
