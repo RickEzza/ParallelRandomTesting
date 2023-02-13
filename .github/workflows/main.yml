@@ -126,7 +126,7 @@ jobs:
         coverage=$(grep -oP '(?<=<td class="coverage">).*(?=</td>)' coverageunion.html)
         echo "::set-output name=coverage::$coverage"
 
-    - name: Display Badge
+    - name: Badge on Display
       uses: thedavidmeister/github-badge-action@v1
       with:
         coverage: ${{ steps.Extract_Coverage.outputs.coverage }}
