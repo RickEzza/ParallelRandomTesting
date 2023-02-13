@@ -114,3 +114,20 @@ jobs:
       with:
         name: Coverage merge
         path: /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coveragemerge/*
+  badge:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Extract Coverage
+      run: |
+        coverage=$(grep -oP '(?<=<td class="coverage">).*(?=</td>)' coverageunion.html)
+        echo "::set-output name=coverage::$coverage"
+
+    - name: Display Badge
+      uses: thedavidmeister/github-badge-action@v1
+      with:
+        coverage: ${{ steps.Extract_Coverage.outputs.coverage }}
+      
