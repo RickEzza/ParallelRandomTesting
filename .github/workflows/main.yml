@@ -128,5 +128,5 @@ jobs:
        name: Coverage merge
 
     - name: Coverage
-      run: grep -oP '(?<=<td class="h">).*(?=</td>)' coverage.html | sed -n 2p
+      run: grep -oP '(?<=<td class="h">).*(?=</td>)' coveragemerge.html | sed -n 2p
       
