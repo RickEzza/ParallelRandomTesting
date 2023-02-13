@@ -127,13 +127,8 @@ jobs:
       with:
        name: Coverage merge
 
-    - name: Extract Coverage
-      run: |
-        coverage=$(grep -oP '(?<=<td class="coverage">).*(?=</td>)' coverageunion.html)
-        echo "::set-output name=coverage::$coverage"
-
-    - name: Badge on Display
-      uses: thedavidmeister/github-badge-action@v1
+    - name: Coverage
+      uses: actions/coverage@v1
       with:
-        coverage: ${{ steps.Extract_Coverage.outputs.coverage }}
+        file: coverageunion.html
       
