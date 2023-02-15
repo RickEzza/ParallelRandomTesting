@@ -141,8 +141,9 @@ jobs:
           
             
             #xmlstarlet sel -t -v "//coverage[@type="line, %"]/@value" coveragemerge.xml
-            xmlstarlet sel -t -v "//coverage[@type='line, %']/@value" coveragemerge.xml | head -1
-
+            export LINE_COVERAGE=$(xmlstarlet sel -t -v "//coverage[@type='line, %']/@value" coveragemerge.xml | head -1)
+    - name: line Coverage
+      run: echo $LINE_COVERAGE
             
     #- name: Jacoco Report to PR
      # id: jacoco
