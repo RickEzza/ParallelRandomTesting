@@ -142,8 +142,8 @@ jobs:
             #xmlstarlet sel -t -v "//coverage[@type='line, %']/@value" coveragemerge.xml | head -1
             #env MY_VAR=$(xmlstarlet sel -t -v "//coverage[@type='line, %']/@value" coveragemerge.xml | head -1)
     - name: Use environment variable
-        run:|
-          echo "MY_VAR is $MY_VAR"
+      run: |
+           echo "MY_VAR is $MY_VAR"
             
     #- name: Jacoco Report to PR
      # id: jacoco
