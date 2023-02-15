@@ -141,7 +141,7 @@ jobs:
           
             
             #xmlstarlet sel -t -v "//coverage[@type="line, %"]/@value" coveragemerge.xml
-            xmlstarlet sel -t -v "//coverage[@type='line, %']/@value" coveragemerge.xml
+            xmlstarlet sel -t -v "//coverage[@type='line, %']/@value" coveragemerge.xml | head -1
 
             
     #- name: Jacoco Report to PR
