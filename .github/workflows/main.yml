@@ -149,7 +149,7 @@ jobs:
       uses: schneegans/dynamic-badges-action@v1.0.0
       with:
         auth: ${{ secrets.GIST_SECRET }}
-        gistID: 5c41961cb4e388aa7dfa606e5bbd1542
+        gistID: 99488398e05ca4ebe8bddedc60dbc49e
         filename: ParallelRandomTesting__${{ env.BRANCH }}.json
         label: Test Coverage
         message: ${{ env.MY_VAR }}
