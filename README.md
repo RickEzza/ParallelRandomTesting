@@ -16,3 +16,8 @@ Al termine della GitHub Action saranno creati 2 Artifacts(Si trovano in basso ne
 - Coverage, che contiene il report "coverageunion.html" finale sulla copertura di tutti i test eseguiti.
 
 Cliccando sugli Artifacts vengono scaricati i .zip.
+
+
+##RISULTATO DELLA COVERAGE
+![coverage](https://img.shields.io/badge/coverage-${{ env.MY_VAR }}-brightgreen)
+
