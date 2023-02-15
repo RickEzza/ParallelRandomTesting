@@ -126,19 +126,23 @@ jobs:
       uses: actions/download-artifact@v3
       with:
        name: Coverage merge
-       
+    - name: Download xmlstarlet
+      run: |
+            sudo apt-get update
+            sudo apt-get install xmlstarlet
+    
     - name: Coverage
       run: |
             #!/bin/bash
             #value= $(grep -oP '(<td class="h">).*(&nbsp;&nbsp;</td>)' coveragemerge.xml | sed -n 2p)
             #value=$(grep -oP '(<td class="h"> )\K\d+' coveragemerge.html | sed -n 2p)
-            echo $(grep -oP '(<TD CLASS="h">).*(&nbsp;&nbsp;</TD>)' coveragemerge.html)
-            sed -n "/<TD CLASS="h">/,/&nbsp;&nbsp;<\/TD>/p" coveragemerge.html
-            
-            sudo apt-get update
-            sudo apt-get install xmlstarlet
+            #echo $(grep -oP '(<TD CLASS="h">).*(&nbsp;&nbsp;</TD>)' coveragemerge.html)
+            #sed -n "/<TD CLASS="h">/,/&nbsp;&nbsp;<\/TD>/p" coveragemerge.html
+          
             
             xmlstarlet sel -t -v "//coverage[@type='line']/@value" coveragemerge.xml
+            
+            
     #- name: Jacoco Report to PR
      # id: jacoco
       #uses: madrapps/jacoco-report@v1.1
