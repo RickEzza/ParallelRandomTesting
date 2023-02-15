@@ -18,4 +18,4 @@ Al termine della GitHub Action saranno creati 2 Artifacts(Si trovano in basso ne
 Cliccando sugli Artifacts vengono scaricati i .zip.
 
 
-![Coverage Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/RiccardoRomano9/5c41961cb4e388aa7dfa606e5bbd1542/raw/ParallelRandomTesting__heads_main.yml)
+![Coverage Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/Giovannircc/99488398e05ca4ebe8bddedc60dbc49e/raw/ParallelRandomTesting__heads_main.yml)
