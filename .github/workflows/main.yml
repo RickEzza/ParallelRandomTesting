@@ -156,6 +156,7 @@ jobs:
         auth: ${{ secrets.GIST_SECRET }}
         gistID: 99488398e05ca4ebe8bddedc60dbc49e
         filename: ParallelRandomTesting__${{ env.BRANCH }}.json
+        schemaVersion: 1
         label: Coverage Line
         message: ${{ env.MY_VAR }}
         color: green
@@ -166,6 +167,7 @@ jobs:
         auth: ${{ secrets.GIST_SECRET }}
         gistID: 99488398e05ca4ebe8bddedc60dbc49e
         filename: ParallelRandomTesting2__${{ env.BRANCH }}.json
+        schemaVersion: 2
         label: Coverage Block
         message: ${{ env.MY_VAR2 }}
         color: green
@@ -176,6 +178,7 @@ jobs:
         auth: ${{ secrets.GIST_SECRET }}
         gistID: 99488398e05ca4ebe8bddedc60dbc49e
         filename: ParallelRandomTesting3__${{ env.BRANCH }}.json
+        schemaVersion: 3
         label: Coverage Method
         message: ${{ env.MY_VAR3 }}
         color: green
@@ -186,6 +189,7 @@ jobs:
         auth: ${{ secrets.GIST_SECRET }}
         gistID: 99488398e05ca4ebe8bddedc60dbc49e
         filename: ParallelRandomTesting4__${{ env.BRANCH }}.json
+        schemaVersion: 4
         label: Coverage Class
         message: ${{ env.MY_VAR4 }}
         color: green
