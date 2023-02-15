@@ -150,7 +150,7 @@ jobs:
       with:
         auth: ${{ secrets.GIST_SECRET }}
         gistID: 99488398e05ca4ebe8bddedc60dbc49e
-        filename: ParallelRandomTesting__heads_main.json
+        filename: ParallelRandomTesting__${{ env.BRANCH }}.json
         label: Test Coverage
         message: ${{ env.MY_VAR }}
         color: green
