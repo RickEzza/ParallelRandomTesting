@@ -134,6 +134,10 @@ jobs:
             #value=$(grep -oP '(<td class="h"> )\K\d+' coveragemerge.html | sed -n 2p)
             echo $(grep -oP '(<TD CLASS="h">).*(&nbsp;&nbsp;</TD>)' coveragemerge.html)
             sed -n "/<TD CLASS="h">/,/&nbsp;&nbsp;<\/TD>/p" coveragemerge.html
+            
+            sudo apt-get update
+            sudo apt-get install xmlstarlet
+            
             xmlstarlet sel -t -v "//coverage[@type='line']/@value" coveragemerge.xml
     #- name: Jacoco Report to PR
      # id: jacoco
