@@ -161,10 +161,12 @@ jobs:
         message: ${{ env.MY_VAR }}
  
         color: |
+                #!/bin/bash
                 if[[ ${{ env.MY_VAR }}>50]]; then
                  green
                 else
                   red
+                fi
         namedLogo: github
     - name: Create the Badge 2
       uses: schneegans/dynamic-badges-action@v1.0.0
