@@ -133,30 +133,62 @@ jobs:
             sudo apt-get update
             sudo apt-get install xmlstarlet
     
-    - name: Coverage
+    - name: Coverage Line
       run: |
              MY_VAR=$(xmlstarlet sel -t -v "//coverage[@type='line, %']/@value" coveragemerge.xml | head -1)
              echo "MY_VAR=$MY_VAR" >> $GITHUB_ENV
-
-
-            #xmlstarlet sel -t -v "//coverage[@type='line, %']/@value" coveragemerge.xml | head -1
-            #env MY_VAR=$(xmlstarlet sel -t -v "//coverage[@type='line, %']/@value" coveragemerge.xml | head -1)
-    - name: Use environment variable
+    - name: Coverage Block
       run: |
-           echo "MY_VAR is $MY_VAR"
+             MY_VAR2=$(xmlstarlet sel -t -v "//coverage[@type='block, %']/@value" coveragemerge.xml | head -1)
+             echo "MY_VAR2=$MY_VAR2" >> $GITHUB_ENV
+    - name: Coverage Method
+      run: |
+             MY_VAR3=$(xmlstarlet sel -t -v "//coverage[@type='method, %']/@value" coveragemerge.xml | head -1)
+             echo "MY_VAR3=$MY_VAR3" >> $GITHUB_ENV
+    - name: Coverage Class
+      run: |
+             MY_VAR4=$(xmlstarlet sel -t -v "//coverage[@type='class, %']/@value" coveragemerge.xml | head -1)
+             echo "MY_VAR4=$MY_VAR4" >> $GITHUB_ENV
             
-    - name: Create the Badge
+    - name: Create the Badge 1
       uses: schneegans/dynamic-badges-action@v1.0.0
       with:
         auth: ${{ secrets.GIST_SECRET }}
         gistID: 99488398e05ca4ebe8bddedc60dbc49e
         filename: ParallelRandomTesting__${{ env.BRANCH }}.json
-        label: Test Coverage
+        label: Coverage Line
         message: ${{ env.MY_VAR }}
         color: green
         namedLogo: jest
-
-            
-
+    - name: Create the Badge 2
+      uses: schneegans/dynamic-badges-action@v1.0.0
+      with:
+        auth: ${{ secrets.GIST_SECRET }}
+        gistID: 99488398e05ca4ebe8bddedc60dbc49e
+        filename: ParallelRandomTesting__${{ env.BRANCH }}.json
+        label: Coverage Block
+        message: ${{ env.MY_VAR2 }}
+        color: green
+        namedLogo: jest
+    - name: Create the Badge 3
+      uses: schneegans/dynamic-badges-action@v1.0.0
+      with:
+        auth: ${{ secrets.GIST_SECRET }}
+        gistID: 99488398e05ca4ebe8bddedc60dbc49e
+        filename: ParallelRandomTesting__${{ env.BRANCH }}.json
+        label: Coverage Method
+        message: ${{ env.MY_VAR3 }}
+        color: green
+        namedLogo: jest          
+    - name: Create the Badge 4
+      uses: schneegans/dynamic-badges-action@v1.0.0
+      with:
+        auth: ${{ secrets.GIST_SECRET }}
+        gistID: 99488398e05ca4ebe8bddedc60dbc49e
+        filename: ParallelRandomTesting__${{ env.BRANCH }}.json
+        label: Coverage Class
+        message: ${{ env.MY_VAR4 }}
+        color: green
+        namedLogo: jest
             
       
