@@ -140,7 +140,7 @@ jobs:
             #sed -n "/<TD CLASS="h">/,/&nbsp;&nbsp;<\/TD>/p" coveragemerge.html
           
             
-            xmlstarlet sel -t -v "//coverage[@type='line']/@value" coveragemerge.xml
+            xmlstarlet sel -t -v "//coverage[@type="line, %"]/@value" coveragemerge.xml
             
             
     #- name: Jacoco Report to PR
