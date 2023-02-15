@@ -135,18 +135,15 @@ jobs:
     
     - name: Coverage
       run: |
-            #!/bin/bash
-            #value= $(grep -oP '(<td class="h">).*(&nbsp;&nbsp;</td>)' coveragemerge.xml | sed -n 2p)
-            #value=$(grep -oP '(<td class="h"> )\K\d+' coveragemerge.html | sed -n 2p)
-            #echo $(grep -oP '(<TD CLASS="h">).*(&nbsp;&nbsp;</TD>)' coveragemerge.html)
-            #sed -n "/<TD CLASS="h">/,/&nbsp;&nbsp;<\/TD>/p" coveragemerge.html
-          
-            
-            #xmlstarlet sel -t -v "//coverage[@type="line, %"]/@value" coveragemerge.xml
-            xmlstarlet sel -t -v "//coverage[@type='line, %']/@value" coveragemerge.xml | head -1
-            env MY_VAR=$(xmlstarlet sel -t -v "//coverage[@type='line, %']/@value" coveragemerge.xml | head -1)
-    - name: line Coverage
-      run: echo $MY_VAR
+             MY_VAR=$(xmlstarlet sel -t -v "//coverage[@type='line, %']/@value" coveragemerge.xml | head -1)
+             echo "MY_VAR=$MY_VAR" >> $GITHUB_ENV
+
+
+            #xmlstarlet sel -t -v "//coverage[@type='line, %']/@value" coveragemerge.xml | head -1
+            #env MY_VAR=$(xmlstarlet sel -t -v "//coverage[@type='line, %']/@value" coveragemerge.xml | head -1)
+    - name: Use environment variable
+        run:|
+          echo "MY_VAR is $MY_VAR"
             
     #- name: Jacoco Report to PR
      # id: jacoco
