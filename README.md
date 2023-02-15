@@ -28,3 +28,7 @@ Cliccando sugli Artifacts vengono scaricati i .zip.
 ![Coverage Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/Giovannircc/99488398e05ca4ebe8bddedc60dbc49e/raw/ParallelRandomTesting4__.json)
 
 ### Note
+
+A causa di alcuni problemi di comunicazione della piattaforma GitHub con GitHubGist, su cui vengono memorizzati i badge, gli stessi potrebbero non risultare aggiornati subito dopo l' esecuzione del workflow. Per visualizzare sempre in maniera corretta i valori di coverage, basterà cliccare sul badge corrispondente
+
+Il problema sembra non riscontrarsi con il browser Microsoft Edge
