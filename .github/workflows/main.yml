@@ -199,7 +199,7 @@ jobs:
         schemaVersion: 4
         label: Coverage Class
         message: ${{ env.MY_VAR4 }}
-        color: green
+        color: red
         namedLogo: github
             
       
