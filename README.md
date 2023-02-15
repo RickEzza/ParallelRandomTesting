@@ -17,8 +17,7 @@ Al termine della GitHub Action saranno creati 2 Artifacts(Si trovano in basso ne
 
 Cliccando sugli Artifacts vengono scaricati i .zip.
 
-
-##RISULTATO DELLA COVERAGE
+##RISULTATO DELLA COVERAGE:
 
 
 ![coverage](https://img.shields.io/badge/coverage-${{ env.MY_VAR }}-brightgreen)
