@@ -160,7 +160,7 @@ jobs:
         label: Coverage Line
         message: ${{ env.MY_VAR }}
         color: green
-        namedLogo: jest
+        namedLogo: github
     - name: Create the Badge 2
       uses: schneegans/dynamic-badges-action@v1.0.0
       with:
@@ -171,7 +171,7 @@ jobs:
         label: Coverage Block
         message: ${{ env.MY_VAR2 }}
         color: green
-        namedLogo: jest
+        namedLogo: github
     - name: Create the Badge 3
       uses: schneegans/dynamic-badges-action@v1.0.0
       with:
@@ -182,7 +182,7 @@ jobs:
         label: Coverage Method
         message: ${{ env.MY_VAR3 }}
         color: green
-        namedLogo: jest          
+        namedLogo: github       
     - name: Create the Badge 4
       uses: schneegans/dynamic-badges-action@v1.0.0
       with:
@@ -193,6 +193,6 @@ jobs:
         label: Coverage Class
         message: ${{ env.MY_VAR4 }}
         color: green
-        namedLogo: jest
+        namedLogo: github
             
       
