@@ -160,11 +160,11 @@ jobs:
         label: Coverage Line
         message: ${{ env.MY_VAR }}
         color: |
-          if (parseFloat(process.env.MY_VAR) < 50) {
+          $(if (parseFloat(process.env.MY_VAR) < 50) {
             return 'red';
           } else {
             return 'green';
-          }
+          })
         namedLogo: github
     - name: Create the Badge 2
       uses: schneegans/dynamic-badges-action@v1.0.0
