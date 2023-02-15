@@ -143,8 +143,8 @@ jobs:
           
             
             #xmlstarlet sel -t -v "//coverage[@type="line, %"]/@value" coveragemerge.xml
-            LINE_COVERAGE=$(xmlstarlet sel -t -v "//coverage[@type='line, %']/@value" coveragemerge.xml | head -1)
-            env MY_VAR=$LINE_COVERAGE
+            xmlstarlet sel -t -v "//coverage[@type='line, %']/@value" coveragemerge.xml | head -1
+            env MY_VAR=$(xmlstarlet sel -t -v "//coverage[@type='line, %']/@value" coveragemerge.xml | head -1)
     - name: line Coverage
       run: echo $MY_VAR
             
