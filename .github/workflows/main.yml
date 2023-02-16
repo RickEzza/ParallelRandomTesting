@@ -200,7 +200,7 @@ jobs:
         git config --global user.email "giovanni.riccardi3@studenti.unina.it"
         git config --global user.name "Giovannircc"
         git add coveragemerge.html 
-        git remote set-url --push origin https://Giovannircc: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@github.com/ParallelRandomTesting
+        git remote set-url --push origin https://github.com/Giovannircc/ParallelRandomTesting
         #git remote set-url --push origin https://your_username:$GITHUB_TOKEN@github.com/your/repo
         git commit -a -m "Add changes"
         git push
