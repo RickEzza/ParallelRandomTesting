@@ -200,7 +200,7 @@ jobs:
         namedLogo: github
     - name: directory
       run: |
-           mkdir merge/coverage
+           mkdir ./merge/coverage
            cp coveragemerge.xml merge/coverage/coveragemerge.xml
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
