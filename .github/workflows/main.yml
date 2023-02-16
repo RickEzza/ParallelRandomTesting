@@ -194,5 +194,9 @@ jobs:
         message: ${{ env.MY_VAR4 }}
         color: green
         namedLogo: github
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
             
       
