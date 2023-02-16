@@ -216,7 +216,7 @@ jobs:
            echo "value=$value" >> $GITHUB_ENV
            
     - uses: stefanzweifel/git-auto-commit-action@v4
-      if: $(( ${{ env.value }}<10 ))
+      if: $(( ${{ env.value }} <10 ))
       with:
         commit_message: Changed files
         file_pattern: merge/*
