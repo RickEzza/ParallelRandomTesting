@@ -205,8 +205,15 @@ jobs:
            cp coveragemerge.xml merge/coverage/coveragemerge.xml
            cp coveragemerge.xml merge/coverage/coveragemerge.html
            cp coveragemerge.xml merge/coverage/coveragemerge.es
+           
+    - name: Percentuale
+      run: |
+           #!/bin/bash
+           percentage=${{ env.MY_ENV }}
+           value=${percentage%%\%*}
+           echo "$value" >> $GITHUB_ENV
     - uses: stefanzweifel/git-auto-commit-action@v4
-      if: $(( ${{ env.MY_VAR }}<10 ))
+      if: $(( ${{ env.value }}<10 ))
       with:
         commit_message: Changed files
         file_pattern: merge/*
