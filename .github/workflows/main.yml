@@ -200,11 +200,13 @@ jobs:
         git config --local user.email "giovanni.riccardi3@studenti.unina.it"
         git config --local user.name "Giovannircc"
         git add coveragemerge.html 
+        git remote set-url origin https://x-access-token:${{ secrets.GIT_TOKEN }}@github.com/$GITHUB_REPOSITORY
         git commit -a -m "Add changes"
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-       github_token: ${{ secrets.GIT_TOKEN }}
+        git push
+    #- name: Push changes
+     # uses: ad-m/github-push-action@master
+      #with:
+       #github_token: ${{ secrets.GIT_TOKEN }}
 
             
       
