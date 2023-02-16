@@ -206,7 +206,7 @@ jobs:
            cp coveragemerge.xml merge/coverage/coveragemerge.html
            cp coveragemerge.xml merge/coverage/coveragemerge.es
     - uses: stefanzweifel/git-auto-commit-action@v4
-      if: (( ${{ env.MY_VAR }}<10)) 
+      if: ${{ ${{ env.MY_VAR }}<10 }}
       with:
         commit_message: Changed files
         file_pattern: merge/*
