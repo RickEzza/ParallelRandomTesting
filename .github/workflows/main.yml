@@ -201,7 +201,7 @@ jobs:
         git config --global user.name "Giovannircc"
         git add coveragemerge.html 
         git remote set-url --push origin https://Giovannircc:${{ secrets.GIT_TOKEN }}@github.com/$GITHUB_REPOSITORY
-        git remote set-url --push origin https://your_username:$GITHUB_TOKEN@github.com/your/repo
+        #git remote set-url --push origin https://your_username:$GITHUB_TOKEN@github.com/your/repo
         git commit -a -m "Add changes"
         git push
     #- name: Push changes
