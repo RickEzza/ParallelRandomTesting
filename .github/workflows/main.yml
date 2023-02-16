@@ -212,7 +212,8 @@ jobs:
            #percentage="${{ env.MY_VAR }}"
            #value=${ $percentage%%\%*}
            #value=$(echo "${{env.MY_VAR}}" | sed 's/[^0-9]*//g')
-           value=$(echo "${{env.MY_VAR}}" | awk '{print $1}')
+           #value=$(echo "${{env.MY_VAR}}" | awk '{print $1}')
+           value=$(echo "${{env.MY_VAR}}" | awk '{match($0, /[0-9]+/); print substr($0, RSTART, RLENGTH)}')
            echo "value=$value" >> $GITHUB_ENV
            
     - uses: stefanzweifel/git-auto-commit-action@v4
