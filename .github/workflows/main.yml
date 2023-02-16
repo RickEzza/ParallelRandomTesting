@@ -211,7 +211,8 @@ jobs:
            #!/bin/bash
            percentage=${{ env.MY_ENV }}
            value=${percentage%%\%*}
-           echo "$value" >> $GITHUB_ENV
+           echo "value=$value" >> $GITHUB_ENV
+           
     - uses: stefanzweifel/git-auto-commit-action@v4
       if: $(( ${{ env.value }}<10 ))
       with:
