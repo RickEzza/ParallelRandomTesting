@@ -209,8 +209,8 @@ jobs:
     - name: Percentuale
       run: |
            #!/bin/bash
-           #percentage=${{ env.MY_VAR }}
-           value=${ ${{env.MY_VAR}}%%\%*}
+           #percentage="${{ env.MY_VAR }}"
+           value=${ percentage%%\%*}
            echo "value=$value" >> $GITHUB_ENV
            
     - uses: stefanzweifel/git-auto-commit-action@v4
