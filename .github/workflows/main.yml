@@ -195,19 +195,21 @@ jobs:
         color: green
         namedLogo: github
         
-    - name: Commit files
-      run: |
-        git config --global user.email "giovanni.riccardi3@studenti.unina.it"
-        git config --global user.name "Giovannircc"
-        git add coveragemerge.html 
-        git remote set-url --push origin https://github.com/Giovannircc/ParallelRandomTesting
+    #- name: Commit files
+     # run: |
+      #  git config --global user.email "giovanni.riccardi3@studenti.unina.it"
+       # git config --global user.name "Giovannircc"
+        #git add coveragemerge.html 
+        #git remote set-url --push origin https://github.com/Giovannircc:${{ secrets.GIT_TOKEN }}/ParallelRandomTesting
         #git remote set-url --push origin https://your_username:$GITHUB_TOKEN@github.com/your/repo
-        git commit -a -m "Add changes"
-        git push
+        #git commit -a -m "Add changes"
+        #git push
     #- name: Push changes
      # uses: ad-m/github-push-action@master
       #with:
        #github_token: ${{ secrets.GIT_TOKEN }}
-
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Changed files
             
       
