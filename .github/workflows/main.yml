@@ -119,6 +119,10 @@ jobs:
     runs-on: ubuntu-latest
     env:
       MY_VAR: 0
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the
+      # added or changed files to the repository.
+      contents: write
 
     steps:
     - name: Checkout code
@@ -195,9 +199,9 @@ jobs:
         color: green
         namedLogo: github
         
-    - name: Commit files
-      run: |
-        git remote set-url --push origin https://github.com/Giovannircc:${{ secrets.GIT_TOKEN }}/ParallelRandomTesting
+    #- name: Commit files
+     # run: |
+        #git remote set-url --push origin https://github.com/Giovannircc:${{ secrets.GIT_TOKEN }}/ParallelRandomTesting
       #  git config --global user.email "giovanni.riccardi3@studenti.unina.it"
        # git config --global user.name "Giovannircc"
         #git add coveragemerge.html 
