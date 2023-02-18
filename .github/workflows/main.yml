@@ -215,7 +215,7 @@ jobs:
            #value=$(echo "${{env.MY_VAR}}" | awk '{print $1}')
            value=$(echo "${{env.MY_VAR}}" | awk '{match($0, /[0-9]+/); print substr($0, RSTART, RLENGTH)}')
            echo "value=$value" >> $GITHUB_ENV
-           if (($value > 10)); then
+           if (($value < 10)); then
              bool=true
              echo "bool=$bool" >> $GITHUB_ENV
            else
@@ -224,8 +224,8 @@ jobs:
            fi
            
     - uses: stefanzweifel/git-auto-commit-action@v4
-      #if: $(( ${{ env.value }} <10 ))
-      if: ${{ env.value }} < 10
+      if: ${{ env.bool }} == true
+      #if: ${{ env.value }} < 10
       with:
         commit_message: Changed files
         file_pattern: merge/*
