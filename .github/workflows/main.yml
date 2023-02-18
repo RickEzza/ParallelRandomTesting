@@ -215,8 +215,11 @@ jobs:
            #value=$(echo "${{env.MY_VAR}}" | awk '{print $1}')
            value=$(echo "${{env.MY_VAR}}" | awk '{match($0, /[0-9]+/); print substr($0, RSTART, RLENGTH)}')
            echo "value=$value" >> $GITHUB_ENV
-           if (($value < 10)); then
+           if (($value > 10)); then
              bool=true
+             echo "bool=$bool" >> $GITHUB_ENV
+           else
+             bool=false
              echo "bool=$bool" >> $GITHUB_ENV
            fi
            
