@@ -217,6 +217,7 @@ jobs:
            echo "value=$value" >> $GITHUB_ENV
            if (($value < 10)); then
              bool=true
+             echo "bool=$bool" >> $GITHUB_ENV
            fi
            
     - uses: stefanzweifel/git-auto-commit-action@v4
