@@ -2,7 +2,7 @@ name: Java Test Generation
 
 on: 
   push:
-    paths: merge/*
+    paths: merge/coverage/*
 
 jobs: 
   tests:
