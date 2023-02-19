@@ -1,8 +1,7 @@
 name: Java Test Generation
 
 on: 
-  push:
-    paths: merge/*
+  push
 
 jobs: 
   tests:
@@ -90,6 +89,11 @@ jobs:
     - name: Emma merge
       run: |
             #!/bin/bash
+            
+            #controllo se esiste coverageunion
+            if test -f "/home/runner/work/ParallelRandomTesting/ParallelRandomTesting/merge/coverage/coveragemerge.es"; then
+              java -classpath /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/emma-2.0.5312/lib/emma.jar emma merge -in coverage_0/coverage_0.es,merge/coverage/coveragemerge.es -out coverage_0/coverage_0.es
+              echo "effettuato primo merge"
             count=0
             for file in /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_?/*.es
             do
