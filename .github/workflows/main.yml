@@ -223,8 +223,9 @@ jobs:
              echo "bool=$bool" >> $GITHUB_ENV
            fi
            
-    - uses: stefanzweifel/git-auto-commit-action@v4
-      if: ${{ env.bool }}
+    - if: ${{ env.bool }} == true
+      uses: stefanzweifel/git-auto-commit-action@v4
+      
       #if: ${{ env.value }} < 10
       with:
         commit_message: Changed files
