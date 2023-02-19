@@ -223,7 +223,7 @@ jobs:
              echo "bool=$bool" >> $GITHUB_ENV
            fi
            
-    - if: ((${{ env.bool }} == 1))
+    - if: ${{ env.bool == 1}} 
       uses: stefanzweifel/git-auto-commit-action@v4
       
       #if: ${{ env.value }} < 10
