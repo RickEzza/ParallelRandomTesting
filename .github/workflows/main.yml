@@ -94,6 +94,8 @@ jobs:
             if test -f "/home/runner/work/ParallelRandomTesting/ParallelRandomTesting/merge/coverage/coveragemerge.es"; then
               java -classpath /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/emma-2.0.5312/lib/emma.jar emma merge -in coverage_0/coverage_0.es,merge/coverage/coveragemerge.es -out coverage_0/coverage_0.es
               echo "effettuato primo merge"
+            fi 
+              
             count=0
             for file in /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_?/*.es
             do
