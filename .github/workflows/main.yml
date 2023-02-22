@@ -1,4 +1,4 @@
-name: Java Test Generation  
+name: Java Test Generation   
 
 on: 
   push
