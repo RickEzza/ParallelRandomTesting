@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Wed Feb 22 15:50:34 UTC 2023 -->
+<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Wed Feb 22 15:54:34 UTC 2023 -->
 
 <report>
   <stats>
@@ -12,8 +12,8 @@
     <all name="all classes">
       <coverage type="class, %" value="100% (11/11)"/>
       <coverage type="method, %" value="77%  (159/207)"/>
-      <coverage type="block, %" value="56%  (1690/3022)"/>
-      <coverage type="line, %" value="54%  (554.9/1035)"/>
+      <coverage type="block, %" value="56%  (1688/3022)"/>
+      <coverage type="line, %" value="54%  (554.8/1035)"/>
 
       <package name="com.werken.saxpath">
         <coverage type="class, %" value="100% (5/5)"/>
@@ -808,20 +808,20 @@
       <package name="org.saxpath.helpers">
         <coverage type="class, %" value="100% (1/1)"/>
         <coverage type="method, %" value="100% (4/4)"/>
-        <coverage type="block, %" value="57%  (68/119)"/>
-        <coverage type="line, %" value="66%  (23/35)"/>
+        <coverage type="block, %" value="55%  (66/119)"/>
+        <coverage type="line, %" value="65%  (22.9/35)"/>
 
         <srcfile name="XPathReaderFactory.java">
           <coverage type="class, %" value="100% (1/1)"/>
           <coverage type="method, %" value="100% (4/4)"/>
-          <coverage type="block, %" value="57%  (68/119)"/>
-          <coverage type="line, %" value="66%  (23/35)"/>
+          <coverage type="block, %" value="55%  (66/119)"/>
+          <coverage type="line, %" value="65%  (22.9/35)"/>
 
           <class name="XPathReaderFactory">
             <coverage type="class, %" value="100% (1/1)"/>
             <coverage type="method, %" value="100% (4/4)"/>
-            <coverage type="block, %" value="57%  (68/119)"/>
-            <coverage type="line, %" value="66%  (23/35)"/>
+            <coverage type="block, %" value="55%  (66/119)"/>
+            <coverage type="line, %" value="65%  (22.9/35)"/>
 
             <method name="createReader (): XPathReader">
               <coverage type="method, %" value="100% (1/1)"/>
@@ -830,8 +830,8 @@
             </method>
             <method name="createReader (String): XPathReader">
               <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="58%  (44/76)"/>
-              <coverage type="line, %" value="68%  (13/19)"/>
+              <coverage type="block, %" value="55%  (42/76)"/>
+              <coverage type="line, %" value="68%  (12.8/19)"/>
             </method>
             <method name="&lt;static initializer&gt;">
               <coverage type="method, %" value="100% (1/1)"/>
