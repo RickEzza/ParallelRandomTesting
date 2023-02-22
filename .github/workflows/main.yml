@@ -53,11 +53,13 @@ jobs:
             rm coverage.ec
             
             #Emma report
-            java -classpath /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/emma-2.0.5312/lib/emma.jar emma report -r html  -Dreport.html.out.file=/home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$timestamp/coverage_$timestamp.html  -in /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$timestamp/coverage_$timestamp.em,/home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$timestamp/coverage_$timestamp.ec
+            #java -classpath /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/emma-2.0.5312/lib/emma.jar emma report -r html  -Dreport.html.out.file=/home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$timestamp/coverage_$timestamp.html  -in /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$timestamp/coverage_$timestamp.em,/home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$timestamp/coverage_$timestamp.ec
             
             #Emma merge .em e .ec
             java -classpath /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/emma-2.0.5312/lib/emma.jar emma merge -in  /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$timestamp/coverage_$timestamp.em,/home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$timestamp/coverage_$timestamp.ec -out /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$timestamp/coverage_$timestamp.es
             
+            java -classpath /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/emma-2.0.5312/lib/emma.jar emma report -r html  -Dreport.html.out.file=/home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$timestamp/coverage_$timestamp.html  -in /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$timestamp/coverage_$timestamp.es
+
     - name: Upload Emma reports
       uses: actions/upload-artifact@v2
       with:
@@ -112,10 +114,10 @@ jobs:
             
             #controllo se esiste coveragemerge
             if test -f "/home/runner/work/ParallelRandomTesting/ParallelRandomTesting/merge/coverage/coveragemerge.es"; then
-              java -classpath /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/emma-2.0.5312/lib/emma.jar emma merge -in /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$((count))/coverage_$((count)).es,merge/coverage/coveragemerge.es -out /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$((count))/coveragemerge.es
+              java -classpath /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/emma-2.0.5312/lib/emma.jar emma merge -in /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$((count))/coverage_$((count)).es,merge/coverage/coveragemerge.es -out merge/coverage/coveragemerge.es
               echo "effettuato merge finale"
               echo $count
-              cp /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$((count))/coveragemerge.es /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coveragemerge.es
+              cp merge/coverage/coveragemerge.es  /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coveragemerge.es
             else
               cp /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$((count))/coverage_$((count)).es /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coveragemerge.es
               echo "else"
