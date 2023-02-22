@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Wed Feb 22 19:41:03 UTC 2023 -->
+<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Wed Feb 22 19:43:53 UTC 2023 -->
 
 <report>
   <stats>
@@ -11,32 +11,37 @@
   <data>
     <all name="all classes">
       <coverage type="class, %" value="100% (11/11)"/>
-      <coverage type="method, %" value="77%  (159/207)"/>
-      <coverage type="block, %" value="57%  (1725/3022)"/>
-      <coverage type="line, %" value="55%  (564.8/1035)"/>
+      <coverage type="method, %" value="75%  (155/207)"/>
+      <coverage type="block, %" value="53%  (1611/3022)"/>
+      <coverage type="line, %" value="51%  (531.7/1035)"/>
 
       <package name="com.werken.saxpath">
         <coverage type="class, %" value="100% (5/5)"/>
-        <coverage type="method, %" value="67%  (96/144)"/>
-        <coverage type="block, %" value="46%  (1055/2297)"/>
-        <coverage type="line, %" value="45%  (372.9/830)"/>
+        <coverage type="method, %" value="64%  (92/144)"/>
+        <coverage type="block, %" value="41%  (941/2297)"/>
+        <coverage type="line, %" value="41%  (339.9/830)"/>
 
         <srcfile name="XPathLexer.java">
           <coverage type="class, %" value="100% (1/1)"/>
-          <coverage type="method, %" value="59%  (26/44)"/>
-          <coverage type="block, %" value="41%  (426/1032)"/>
-          <coverage type="line, %" value="40%  (144.1/362)"/>
+          <coverage type="method, %" value="57%  (25/44)"/>
+          <coverage type="block, %" value="39%  (403/1032)"/>
+          <coverage type="line, %" value="38%  (137.1/362)"/>
 
           <class name="XPathLexer">
             <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="59%  (26/44)"/>
-            <coverage type="block, %" value="41%  (426/1032)"/>
-            <coverage type="line, %" value="40%  (144.1/362)"/>
+            <coverage type="method, %" value="57%  (25/44)"/>
+            <coverage type="block, %" value="39%  (403/1032)"/>
+            <coverage type="line, %" value="38%  (137.1/362)"/>
 
             <method name="XPathLexer (): void">
               <coverage type="method, %" value="0%   (0/1)"/>
               <coverage type="block, %" value="0%   (0/3)"/>
               <coverage type="line, %" value="0%   (0/1)"/>
+            </method>
+            <method name="and (): Token">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/44)"/>
+              <coverage type="line, %" value="0%   (0/13)"/>
             </method>
             <method name="at (): Token">
               <coverage type="method, %" value="0%   (0/1)"/>
@@ -128,11 +133,6 @@
               <coverage type="block, %" value="32%  (14/44)"/>
               <coverage type="line, %" value="31%  (4/13)"/>
             </method>
-            <method name="and (): Token">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="43%  (19/44)"/>
-              <coverage type="line, %" value="38%  (5/13)"/>
-            </method>
             <method name="nextToken (): Token">
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="53%  (77/145)"/>
@@ -150,8 +150,8 @@
             </method>
             <method name="operatorName (): Token">
               <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="83%  (20/24)"/>
-              <coverage type="line, %" value="82%  (9/11)"/>
+              <coverage type="block, %" value="67%  (16/24)"/>
+              <coverage type="line, %" value="64%  (7/11)"/>
             </method>
             <method name="LA (int): char">
               <coverage type="method, %" value="100% (1/1)"/>
@@ -257,15 +257,15 @@
         </srcfile>
         <srcfile name="XPathReader.java">
           <coverage type="class, %" value="100% (1/1)"/>
-          <coverage type="method, %" value="74%  (31/42)"/>
-          <coverage type="block, %" value="48%  (544/1144)"/>
-          <coverage type="line, %" value="45%  (180.2/401)"/>
+          <coverage type="method, %" value="67%  (28/42)"/>
+          <coverage type="block, %" value="40%  (453/1144)"/>
+          <coverage type="line, %" value="38%  (154.2/401)"/>
 
           <class name="XPathReader">
             <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="74%  (31/42)"/>
-            <coverage type="block, %" value="48%  (544/1144)"/>
-            <coverage type="line, %" value="45%  (180.2/401)"/>
+            <coverage type="method, %" value="67%  (28/42)"/>
+            <coverage type="block, %" value="40%  (453/1144)"/>
+            <coverage type="line, %" value="38%  (154.2/401)"/>
 
             <method name="abbrStep (): void">
               <coverage type="method, %" value="0%   (0/1)"/>
@@ -277,10 +277,25 @@
               <coverage type="block, %" value="0%   (0/41)"/>
               <coverage type="line, %" value="0%   (0/15)"/>
             </method>
+            <method name="arguments (): void">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/19)"/>
+              <coverage type="line, %" value="0%   (0/5)"/>
+            </method>
             <method name="axisSpecifier (): int">
               <coverage type="method, %" value="0%   (0/1)"/>
               <coverage type="block, %" value="0%   (0/38)"/>
               <coverage type="line, %" value="0%   (0/13)"/>
+            </method>
+            <method name="functionCall (): void">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/45)"/>
+              <coverage type="line, %" value="0%   (0/14)"/>
+            </method>
+            <method name="isNodeTypeName (Token): boolean">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/23)"/>
+              <coverage type="line, %" value="0%   (0/7)"/>
             </method>
             <method name="literal (): void">
               <coverage type="method, %" value="0%   (0/1)"/>
@@ -352,6 +367,11 @@
               <coverage type="block, %" value="47%  (16/34)"/>
               <coverage type="line, %" value="43%  (6/14)"/>
             </method>
+            <method name="pathExpr (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="47%  (32/68)"/>
+              <coverage type="line, %" value="43%  (9/21)"/>
+            </method>
             <method name="step (boolean): void">
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="56%  (18/32)"/>
@@ -387,30 +407,15 @@
               <coverage type="block, %" value="67%  (6/9)"/>
               <coverage type="line, %" value="54%  (1.6/3)"/>
             </method>
+            <method name="filterExpr (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="69%  (27/39)"/>
+              <coverage type="line, %" value="58%  (11/19)"/>
+            </method>
             <method name="additiveExpr (): void">
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="74%  (25/34)"/>
               <coverage type="line, %" value="71%  (10/14)"/>
-            </method>
-            <method name="pathExpr (): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="74%  (50/68)"/>
-              <coverage type="line, %" value="57%  (12/21)"/>
-            </method>
-            <method name="arguments (): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="74%  (14/19)"/>
-              <coverage type="line, %" value="72%  (3.6/5)"/>
-            </method>
-            <method name="filterExpr (): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="77%  (30/39)"/>
-              <coverage type="line, %" value="68%  (13/19)"/>
-            </method>
-            <method name="functionCall (): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="78%  (35/45)"/>
-              <coverage type="line, %" value="82%  (11.5/14)"/>
             </method>
             <method name="nameTest (int): void">
               <coverage type="method, %" value="100% (1/1)"/>
@@ -421,11 +426,6 @@
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="91%  (20/22)"/>
               <coverage type="line, %" value="83%  (5/6)"/>
-            </method>
-            <method name="isNodeTypeName (Token): boolean">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="91%  (21/23)"/>
-              <coverage type="line, %" value="86%  (6/7)"/>
             </method>
             <method name="parse (String): void">
               <coverage type="method, %" value="100% (1/1)"/>
