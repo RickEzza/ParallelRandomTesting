@@ -43,7 +43,7 @@ jobs:
             java -noverify -classpath /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/emma-2.0.5312/lib/emma.jar emma instr -m fullcopy -d /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$timestamp -ip /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/jars/saxpath.jar -out coverage_$timestamp/coverage_$timestamp.em
 
             #Randoop
-            java -noverify -classpath /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$timestamp/lib/saxpath.jar:/home/runner/work/ParallelRandomTesting/ParallelRandomTesting/emma-2.0.5312/lib/emma.jar:/home/runner/work/ParallelRandomTesting/ParallelRandomTesting/randoop-all-3.0.6.jar randoop.main.Main gentests --classlist=/home/runner/work/ParallelRandomTesting/ParallelRandomTesting/lista.txt --timelimit=2 --no-regression-tests=true --junit-output-dir=/home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$timestamp
+            java -noverify -classpath /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$timestamp/lib/saxpath.jar:/home/runner/work/ParallelRandomTesting/ParallelRandomTesting/emma-2.0.5312/lib/emma.jar:/home/runner/work/ParallelRandomTesting/ParallelRandomTesting/randoop-all-3.0.6.jar randoop.main.Main gentests --classlist=/home/runner/work/ParallelRandomTesting/ParallelRandomTesting/lista.txt --timelimit=200 --no-regression-tests=true --junit-output-dir=/home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$timestamp
             
             cp coverage.ec /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$timestamp/coverage_$timestamp.ec
             rm coverage.ec
@@ -90,11 +90,7 @@ jobs:
       run: |
             #!/bin/bash
             
-            #controllo se esiste coverageunion
-            if test -f "/home/runner/work/ParallelRandomTesting/ParallelRandomTesting/merge/coverage/coveragemerge.es"; then
-              java -classpath /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/emma-2.0.5312/lib/emma.jar emma merge -in coverage_0/coverage_0.es,merge/coverage/coveragemerge.es -out coverage_0/coverage_0.es
-              echo "effettuato primo merge"
-            fi 
+
               
             count=0
             for file in /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_?/*.es
@@ -110,7 +106,13 @@ jobs:
              fi
             done
             
-            cp /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$((count))/coverage_$((count)).es /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coveragemerge.es
+            #controllo se esiste coveragemerge
+            if test -f "/home/runner/work/ParallelRandomTesting/ParallelRandomTesting/merge/coverage/coveragemerge.es"; then
+              java -classpath /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/emma-2.0.5312/lib/emma.jar emma merge -in /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$((count))/coverage_$((count)).es,merge/coverage/coveragemerge.es -out /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$((count))/coveragemerge.es
+              echo "effettuato primo merge"
+            fi 
+            
+            cp /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coverage_$((count))/coveragemerge.es /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coveragemerge.es
  
             #Emma report finale
             java -classpath /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/emma-2.0.5312/lib/emma.jar emma report -r html  -Dreport.html.out.file=/home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coveragemerge/coveragemerge.html  -in /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/coveragemerge.es
