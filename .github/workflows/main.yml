@@ -1,7 +1,7 @@
 name: Java Test Generation   
  
 on: 
-  push
+  push 
  
 jobs: 
   tests:
