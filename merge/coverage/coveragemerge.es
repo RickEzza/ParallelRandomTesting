@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Wed Feb 22 19:06:24 UTC 2023 -->
+<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Wed Feb 22 19:10:50 UTC 2023 -->
 
 <report>
   <stats>
@@ -11,27 +11,27 @@
   <data>
     <all name="all classes">
       <coverage type="class, %" value="100% (11/11)"/>
-      <coverage type="method, %" value="77%  (160/207)"/>
-      <coverage type="block, %" value="56%  (1704/3022)"/>
-      <coverage type="line, %" value="54%  (559.8/1035)"/>
+      <coverage type="method, %" value="76%  (157/207)"/>
+      <coverage type="block, %" value="56%  (1682/3022)"/>
+      <coverage type="line, %" value="53%  (550.8/1035)"/>
 
       <package name="com.werken.saxpath">
         <coverage type="class, %" value="100% (5/5)"/>
-        <coverage type="method, %" value="67%  (97/144)"/>
-        <coverage type="block, %" value="45%  (1034/2297)"/>
-        <coverage type="line, %" value="44%  (367.9/830)"/>
+        <coverage type="method, %" value="65%  (94/144)"/>
+        <coverage type="block, %" value="44%  (1014/2297)"/>
+        <coverage type="line, %" value="43%  (359.9/830)"/>
 
         <srcfile name="XPathLexer.java">
           <coverage type="class, %" value="100% (1/1)"/>
-          <coverage type="method, %" value="57%  (25/44)"/>
-          <coverage type="block, %" value="39%  (403/1032)"/>
-          <coverage type="line, %" value="38%  (137.1/362)"/>
+          <coverage type="method, %" value="55%  (24/44)"/>
+          <coverage type="block, %" value="37%  (385/1032)"/>
+          <coverage type="line, %" value="36%  (131.1/362)"/>
 
           <class name="XPathLexer">
             <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="57%  (25/44)"/>
-            <coverage type="block, %" value="39%  (403/1032)"/>
-            <coverage type="line, %" value="38%  (137.1/362)"/>
+            <coverage type="method, %" value="55%  (24/44)"/>
+            <coverage type="block, %" value="37%  (385/1032)"/>
+            <coverage type="line, %" value="36%  (131.1/362)"/>
 
             <method name="XPathLexer (): void">
               <coverage type="method, %" value="0%   (0/1)"/>
@@ -57,6 +57,11 @@
               <coverage type="method, %" value="0%   (0/1)"/>
               <coverage type="block, %" value="0%   (0/7)"/>
               <coverage type="line, %" value="0%   (0/2)"/>
+            </method>
+            <method name="div (): Token">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/44)"/>
+              <coverage type="line, %" value="0%   (0/13)"/>
             </method>
             <method name="dollar (): Token">
               <coverage type="method, %" value="0%   (0/1)"/>
@@ -128,10 +133,10 @@
               <coverage type="block, %" value="0%   (0/17)"/>
               <coverage type="line, %" value="0%   (0/6)"/>
             </method>
-            <method name="div (): Token">
+            <method name="operatorName (): Token">
               <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="32%  (14/44)"/>
-              <coverage type="line, %" value="31%  (4/13)"/>
+              <coverage type="block, %" value="50%  (12/24)"/>
+              <coverage type="line, %" value="45%  (5/11)"/>
             </method>
             <method name="nextToken (): Token">
               <coverage type="method, %" value="100% (1/1)"/>
@@ -147,11 +152,6 @@
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="63%  (29/46)"/>
               <coverage type="line, %" value="63%  (12/19)"/>
-            </method>
-            <method name="operatorName (): Token">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="67%  (16/24)"/>
-              <coverage type="line, %" value="64%  (7/11)"/>
             </method>
             <method name="LA (int): char">
               <coverage type="method, %" value="100% (1/1)"/>
@@ -481,9 +481,9 @@
         </srcfile>
         <srcfile name="DefaultXPathHandler.java">
           <coverage type="class, %" value="100% (2/2)"/>
-          <coverage type="method, %" value="67%  (32/48)"/>
-          <coverage type="block, %" value="68%  (39/57)"/>
-          <coverage type="line, %" value="68%  (32.6/48)"/>
+          <coverage type="method, %" value="62%  (30/48)"/>
+          <coverage type="block, %" value="65%  (37/57)"/>
+          <coverage type="line, %" value="64%  (30.6/48)"/>
 
           <class name="DefaultXPathHandler$Singleton">
             <coverage type="class, %" value="100% (1/1)"/>
@@ -504,9 +504,9 @@
           </class>
           <class name="DefaultXPathHandler">
             <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="67%  (31/46)"/>
-            <coverage type="block, %" value="69%  (34/49)"/>
-            <coverage type="line, %" value="67%  (31/46)"/>
+            <coverage type="method, %" value="63%  (29/46)"/>
+            <coverage type="block, %" value="65%  (32/49)"/>
+            <coverage type="line, %" value="63%  (29/46)"/>
 
             <method name="endAbsoluteLocationPath (): void">
               <coverage type="method, %" value="0%   (0/1)"/>
@@ -519,6 +519,11 @@
               <coverage type="line, %" value="0%   (0/1)"/>
             </method>
             <method name="endCommentNodeStep (): void">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/1)"/>
+              <coverage type="line, %" value="0%   (0/1)"/>
+            </method>
+            <method name="endFunction (): void">
               <coverage type="method, %" value="0%   (0/1)"/>
               <coverage type="block, %" value="0%   (0/1)"/>
               <coverage type="line, %" value="0%   (0/1)"/>
@@ -559,6 +564,11 @@
               <coverage type="line, %" value="0%   (0/1)"/>
             </method>
             <method name="startCommentNodeStep (int): void">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/1)"/>
+              <coverage type="line, %" value="0%   (0/1)"/>
+            </method>
+            <method name="startFunction (String, String): void">
               <coverage type="method, %" value="0%   (0/1)"/>
               <coverage type="block, %" value="0%   (0/1)"/>
               <coverage type="line, %" value="0%   (0/1)"/>
@@ -604,11 +614,6 @@
               <coverage type="line, %" value="100% (1/1)"/>
             </method>
             <method name="endFilterExpr (): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (1/1)"/>
-              <coverage type="line, %" value="100% (1/1)"/>
-            </method>
-            <method name="endFunction (): void">
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="100% (1/1)"/>
               <coverage type="line, %" value="100% (1/1)"/>
@@ -684,11 +689,6 @@
               <coverage type="line, %" value="100% (1/1)"/>
             </method>
             <method name="startFilterExpr (): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (1/1)"/>
-              <coverage type="line, %" value="100% (1/1)"/>
-            </method>
-            <method name="startFunction (String, String): void">
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="100% (1/1)"/>
               <coverage type="line, %" value="100% (1/1)"/>
@@ -849,25 +849,25 @@
       <package name="org.saxpath">
         <coverage type="class, %" value="100% (4/4)"/>
         <coverage type="method, %" value="100% (11/11)"/>
-        <coverage type="block, %" value="99%  (204/206)"/>
-        <coverage type="line, %" value="99%  (66/67)"/>
+        <coverage type="block, %" value="98%  (202/206)"/>
+        <coverage type="line, %" value="97%  (65/67)"/>
 
         <srcfile name="Axis.java">
           <coverage type="class, %" value="100% (1/1)"/>
           <coverage type="method, %" value="100% (3/3)"/>
-          <coverage type="block, %" value="98%  (111/113)"/>
-          <coverage type="line, %" value="98%  (42/43)"/>
+          <coverage type="block, %" value="96%  (109/113)"/>
+          <coverage type="line, %" value="95%  (41/43)"/>
 
           <class name="Axis">
             <coverage type="class, %" value="100% (1/1)"/>
             <coverage type="method, %" value="100% (3/3)"/>
-            <coverage type="block, %" value="98%  (111/113)"/>
-            <coverage type="line, %" value="98%  (42/43)"/>
+            <coverage type="block, %" value="96%  (109/113)"/>
+            <coverage type="line, %" value="95%  (41/43)"/>
 
             <method name="lookup (String): int">
               <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="98%  (78/80)"/>
-              <coverage type="line, %" value="96%  (26/27)"/>
+              <coverage type="block, %" value="95%  (76/80)"/>
+              <coverage type="line, %" value="93%  (25/27)"/>
             </method>
             <method name="Axis (): void">
               <coverage type="method, %" value="100% (1/1)"/>
