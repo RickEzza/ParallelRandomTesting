@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Wed Feb 22 16:07:30 UTC 2023 -->
+<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Wed Feb 22 16:10:04 UTC 2023 -->
 
 <report>
   <stats>
@@ -12,31 +12,36 @@
     <all name="all classes">
       <coverage type="class, %" value="100% (11/11)"/>
       <coverage type="method, %" value="76%  (158/207)"/>
-      <coverage type="block, %" value="57%  (1709/3022)"/>
-      <coverage type="line, %" value="54%  (559.8/1035)"/>
+      <coverage type="block, %" value="56%  (1704/3022)"/>
+      <coverage type="line, %" value="54%  (558.8/1035)"/>
 
       <package name="com.werken.saxpath">
         <coverage type="class, %" value="100% (5/5)"/>
         <coverage type="method, %" value="66%  (95/144)"/>
-        <coverage type="block, %" value="45%  (1037/2297)"/>
-        <coverage type="line, %" value="44%  (366.9/830)"/>
+        <coverage type="block, %" value="45%  (1032/2297)"/>
+        <coverage type="line, %" value="44%  (365.9/830)"/>
 
         <srcfile name="XPathLexer.java">
           <coverage type="class, %" value="100% (1/1)"/>
           <coverage type="method, %" value="57%  (25/44)"/>
-          <coverage type="block, %" value="40%  (408/1032)"/>
-          <coverage type="line, %" value="38%  (138.1/362)"/>
+          <coverage type="block, %" value="39%  (403/1032)"/>
+          <coverage type="line, %" value="38%  (137.1/362)"/>
 
           <class name="XPathLexer">
             <coverage type="class, %" value="100% (1/1)"/>
             <coverage type="method, %" value="57%  (25/44)"/>
-            <coverage type="block, %" value="40%  (408/1032)"/>
-            <coverage type="line, %" value="38%  (138.1/362)"/>
+            <coverage type="block, %" value="39%  (403/1032)"/>
+            <coverage type="line, %" value="38%  (137.1/362)"/>
 
             <method name="XPathLexer (): void">
               <coverage type="method, %" value="0%   (0/1)"/>
               <coverage type="block, %" value="0%   (0/3)"/>
               <coverage type="line, %" value="0%   (0/1)"/>
+            </method>
+            <method name="and (): Token">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/44)"/>
+              <coverage type="line, %" value="0%   (0/13)"/>
             </method>
             <method name="at (): Token">
               <coverage type="method, %" value="0%   (0/1)"/>
@@ -52,11 +57,6 @@
               <coverage type="method, %" value="0%   (0/1)"/>
               <coverage type="block, %" value="0%   (0/7)"/>
               <coverage type="line, %" value="0%   (0/2)"/>
-            </method>
-            <method name="div (): Token">
-              <coverage type="method, %" value="0%   (0/1)"/>
-              <coverage type="block, %" value="0%   (0/44)"/>
-              <coverage type="line, %" value="0%   (0/13)"/>
             </method>
             <method name="dollar (): Token">
               <coverage type="method, %" value="0%   (0/1)"/>
@@ -128,10 +128,10 @@
               <coverage type="block, %" value="0%   (0/17)"/>
               <coverage type="line, %" value="0%   (0/6)"/>
             </method>
-            <method name="and (): Token">
+            <method name="div (): Token">
               <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="43%  (19/44)"/>
-              <coverage type="line, %" value="38%  (5/13)"/>
+              <coverage type="block, %" value="32%  (14/44)"/>
+              <coverage type="line, %" value="31%  (4/13)"/>
             </method>
             <method name="nextToken (): Token">
               <coverage type="method, %" value="100% (1/1)"/>
