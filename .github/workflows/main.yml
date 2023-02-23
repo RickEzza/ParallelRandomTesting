@@ -161,9 +161,10 @@ jobs:
       run: |
              MY_VAR=$(xmlstarlet sel -t -v "//coverage[@type='line, %']/@value" coveragemerge.xml | head -1)
              echo "MY_VAR=$MY_VAR" >> $GITHUB_ENV
+    - name: Coverage Line color
+      run: |         
              
-             
-             VALUE=$(echo "$MY_VAR" | awk '{match($0, /[0-9]+/); print substr($0, RSTART, RLENGTH)}')
+             VALUE=$(echo "${{env.MYVAR}}" | awk '{match($0, /[0-9]+/); print substr($0, RSTART, RLENGTH)}')
              
              COLOR=red
              echo "COLOR=$COLOR" >> $GITHUB_ENV 
