@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Thu Feb 23 10:38:26 UTC 2023 -->
+<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Thu Feb 23 10:40:49 UTC 2023 -->
 
 <report>
   <stats>
@@ -12,8 +12,8 @@
     <all name="all classes">
       <coverage type="class, %" value="100% (11/11)"/>
       <coverage type="method, %" value="74%  (154/207)"/>
-      <coverage type="block, %" value="53%  (1593/3022)"/>
-      <coverage type="line, %" value="51%  (525.7/1035)"/>
+      <coverage type="block, %" value="53%  (1589/3022)"/>
+      <coverage type="line, %" value="51%  (523.7/1035)"/>
 
       <package name="com.werken.saxpath">
         <coverage type="class, %" value="100% (5/5)"/>
@@ -849,25 +849,25 @@
       <package name="org.saxpath">
         <coverage type="class, %" value="100% (4/4)"/>
         <coverage type="method, %" value="100% (11/11)"/>
-        <coverage type="block, %" value="99%  (204/206)"/>
-        <coverage type="line, %" value="99%  (66/67)"/>
+        <coverage type="block, %" value="97%  (200/206)"/>
+        <coverage type="line, %" value="96%  (64/67)"/>
 
         <srcfile name="Axis.java">
           <coverage type="class, %" value="100% (1/1)"/>
           <coverage type="method, %" value="100% (3/3)"/>
-          <coverage type="block, %" value="98%  (111/113)"/>
-          <coverage type="line, %" value="98%  (42/43)"/>
+          <coverage type="block, %" value="95%  (107/113)"/>
+          <coverage type="line, %" value="93%  (40/43)"/>
 
           <class name="Axis">
             <coverage type="class, %" value="100% (1/1)"/>
             <coverage type="method, %" value="100% (3/3)"/>
-            <coverage type="block, %" value="98%  (111/113)"/>
-            <coverage type="line, %" value="98%  (42/43)"/>
+            <coverage type="block, %" value="95%  (107/113)"/>
+            <coverage type="line, %" value="93%  (40/43)"/>
 
             <method name="lookup (String): int">
               <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="98%  (78/80)"/>
-              <coverage type="line, %" value="96%  (26/27)"/>
+              <coverage type="block, %" value="92%  (74/80)"/>
+              <coverage type="line, %" value="89%  (24/27)"/>
             </method>
             <method name="Axis (): void">
               <coverage type="method, %" value="100% (1/1)"/>
