@@ -172,21 +172,72 @@ jobs:
              if (($VALUE > 50)); then
               COLOR=orange
               echo "COLOR=$COLOR" >> $GITHUB_ENV
+              if(($VALUE >= 60)); then
+               COLOR=green
+               echo "COLOR=$COLOR" >> $GITHUB_ENV
+              fi
              fi
              
     - name: Coverage Block
       run: |
              MY_VAR2=$(xmlstarlet sel -t -v "//coverage[@type='block, %']/@value" coveragemerge.xml | head -1)
              echo "MY_VAR2=$MY_VAR2" >> $GITHUB_ENV
+    - name: Coverage bLOCK color
+      run: |         
+             
+             VALUE=$(echo "${{env.MY_VAR2}}" | awk '{match($0, /[0-9]+/); print substr($0, RSTART, RLENGTH)}')
+             echo $VALUE
+             COLOR2=red
+             echo "COLOR2=$COLOR" >> $GITHUB_ENV 
+             
+             if (($VALUE > 50)); then
+              COLOR2=orange
+              echo "COLOR2=$COLOR2" >> $GITHUB_ENV
+              if(($VALUE >= 60)); then
+               COLOR2=green
+               echo "COLOR2=$COLOR2" >> $GITHUB_ENV
+              fi
+             fi
     - name: Coverage Method
       run: |
              MY_VAR3=$(xmlstarlet sel -t -v "//coverage[@type='method, %']/@value" coveragemerge.xml | head -1)
              echo "MY_VAR3=$MY_VAR3" >> $GITHUB_ENV
+    - name: Coverage Method color
+      run: |         
+             
+             VALUE=$(echo "${{env.MY_VAR3}}" | awk '{match($0, /[0-9]+/); print substr($0, RSTART, RLENGTH)}')
+             echo $VALUE
+             COLOR3=red
+             echo "COLOR3=$COLOR3" >> $GITHUB_ENV 
+             
+             if (($VALUE > 50)); then
+              COLOR3=orange
+              echo "COLOR3=$COLOR3" >> $GITHUB_ENV
+              if(($VALUE >= 60)); then
+               COLOR3=green
+               echo "COLOR3=$COLOR3" >> $GITHUB_ENV
+              fi
+             fi
     - name: Coverage Class
       run: |
              MY_VAR4=$(xmlstarlet sel -t -v "//coverage[@type='class, %']/@value" coveragemerge.xml | head -1)
              echo "MY_VAR4=$MY_VAR4" >> $GITHUB_ENV
-            
+    - name: Coverage Class color
+      run: |         
+             
+             VALUE=$(echo "${{env.MY_VAR4}}" | awk '{match($0, /[0-9]+/); print substr($0, RSTART, RLENGTH)}')
+             echo $VALUE
+             COLOR4=red
+             echo "COLOR4=$COLOR4" >> $GITHUB_ENV 
+             
+             if (($VALUE > 50)); then
+              COLOR4=orange
+              echo "COLOR4=$COLOR4" >> $GITHUB_ENV
+              if(($VALUE >= 60)); then
+               COLOR4=green
+               echo "COLOR4=$COLOR4" >> $GITHUB_ENV
+              fi
+             fi            
     - name: Create the Badge 1
       uses: schneegans/dynamic-badges-action@v1.0.0
       with:
@@ -207,7 +258,7 @@ jobs:
         schemaVersion: 2
         label: Coverage Block
         message: ${{ env.MY_VAR2 }}
-        color: ${{ env.COLOR }}
+        color: ${{ env.COLOR2 }}
         namedLogo: github
     - name: Create the Badge 3
       uses: schneegans/dynamic-badges-action@v1.0.0
@@ -218,7 +269,7 @@ jobs:
         schemaVersion: 3
         label: Coverage Method
         message: ${{ env.MY_VAR3 }}
-        color: ${{ env.COLOR }}
+        color: ${{ env.COLOR3 }}
         namedLogo: github       
     - name: Create the Badge 4
       uses: schneegans/dynamic-badges-action@v1.0.0
@@ -229,7 +280,7 @@ jobs:
         schemaVersion: 4
         label: Coverage Class
         message: ${{ env.MY_VAR4 }}
-        color: ${{ env.COLOR }}
+        color: ${{ env.COLOR4 }}
         namedLogo: github
     - name: directory 
       run: |
