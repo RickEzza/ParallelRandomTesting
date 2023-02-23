@@ -223,8 +223,8 @@ jobs:
            #!/bin/bash
            mkdir -p /home/runner/work/ParallelRandomTesting/ParallelRandomTesting/merge/coverage
            cp coveragemerge.xml merge/coverage/coveragemerge.xml
-           cp coveragemerge.xml merge/coverage/coveragemerge.html
-           cp coveragemerge.xml merge/coverage/coveragemerge.es
+           cp coveragemerge.html merge/coverage/coveragemerge.html
+           cp coveragemerge.es merge/coverage/coveragemerge.es
            
     - name: Percentuale
       run: |
