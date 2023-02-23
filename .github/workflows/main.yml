@@ -316,10 +316,9 @@ jobs:
         file_pattern: merge/*
         
     - if: ${{ env.bool == 1}}
-      uses: reitermarkus/rerun-workflow@v1
+      uses: benc-uk/workflow-dispatch@v1
       with:
-        token: ${{ secrets.GIT_TOKEN }}
-        workflow: main.yml
+        workflow: My Workflow
         
 
 
