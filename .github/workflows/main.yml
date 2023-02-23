@@ -308,6 +308,24 @@ jobs:
              echo "bool=$bool" >> $GITHUB_ENV
            fi
            
+    - name: Get last commit date of file
+      id: last-commit
+      uses: actions/github-script@v4
+      with:
+          script: |
+            const { data: [commit] } = await github.repos.listCommits({
+              path: 'merge/coverage/coveragemerge.es',
+              per_page: 1
+            });
+            return commit.commit.author.date;
+      env:
+        GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+
+    - name: Format last commit date
+      run: echo "The file was last modified on $(echo ${LAST_COMMIT} | date -Iseconds)"
+      env:
+          LAST_COMMIT: ${{ steps.last-commit.outputs.result }}
+           
     - if: ${{ env.bool == 1}}
       uses: stefanzweifel/git-auto-commit-action@v4
       
