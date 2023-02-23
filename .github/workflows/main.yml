@@ -1,4 +1,4 @@
-name: Java Test Generation  
+name: Parallel Random Testing  
  
 on:  
   workflow_dispatch
