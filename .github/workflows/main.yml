@@ -162,17 +162,17 @@ jobs:
              MY_VAR=$(xmlstarlet sel -t -v "//coverage[@type='line, %']/@value" coveragemerge.xml | head -1)
              echo "MY_VAR=$MY_VAR" >> $GITHUB_ENV
              VALUE=$(echo "${{env.MY_VAR}}" | awk '{match($0, /[0-9]+/); print substr($0, RSTART, RLENGTH)}')
+             
              COLOR=red
              echo "COLOR=$COLOR" >> $GITHUB_ENV 
              
-             if ((VALUE > 50 && VALUE < 60)); then
+             if ((VALUE > 50)); then
               COLOR=orange
-              echo "COLOR=$COLOR" >> $GITHUB_ENV  
-             fi
-             
-             if ((VALUE >= 60)); then
-              COLOR=green
-              echo "COLOR=$COLOR" >> $GITHUB_ENV  
+              echo "COLOR=$COLOR" >> $GITHUB_ENV 
+              if ((VALUE >= 60)); then
+               COLOR=green
+               echo "COLOR=$COLOR" >> $GITHUB_ENV  
+              fi
              fi
              
     - name: Coverage Block
