@@ -161,6 +161,13 @@ jobs:
       run: |
              MY_VAR=$(xmlstarlet sel -t -v "//coverage[@type='line, %']/@value" coveragemerge.xml | head -1)
              echo "MY_VAR=$MY_VAR" >> $GITHUB_ENV
+             if (($MY_VAR < 70)); then
+              COLOR=red
+              echo "COLOR=$COLOR" >> $GITHUB_ENV
+             else
+              COLOR=green
+              echo "COLOR=$COLOR" >> $GITHUB_ENV   
+             fi
     - name: Coverage Block
       run: |
              MY_VAR2=$(xmlstarlet sel -t -v "//coverage[@type='block, %']/@value" coveragemerge.xml | head -1)
