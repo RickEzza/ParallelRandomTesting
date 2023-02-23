@@ -166,10 +166,10 @@ jobs:
              COLOR=red
              echo "COLOR=$COLOR" >> $GITHUB_ENV 
              
-             if ((VALUE > 50)); then
+             if (( $VALUE > 50)); then
               COLOR=orange
               echo "COLOR=$COLOR" >> $GITHUB_ENV 
-              if ((VALUE >= 60)); then
+              if (( $VALUE >= 60)); then
                COLOR=green
                echo "COLOR=$COLOR" >> $GITHUB_ENV  
               fi
