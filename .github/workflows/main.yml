@@ -294,10 +294,6 @@ jobs:
     - name: Percentuale
       run: |
            #!/bin/bash
-           #percentage="${{ env.MY_VAR }}"
-           #value=${ $percentage%%\%*}
-           #value=$(echo "${{env.MY_VAR}}" | sed 's/[^0-9]*//g')
-           #value=$(echo "${{env.MY_VAR}}" | awk '{print $1}')
            value=$(echo "${{env.MY_VAR}}" | awk '{match($0, /[0-9]+/); print substr($0, RSTART, RLENGTH)}')
            echo "value=$value" >> $GITHUB_ENV
            if (($value < 56)); then
@@ -307,32 +303,6 @@ jobs:
              bool=0
              echo "bool=$bool" >> $GITHUB_ENV
            fi
-           
-    - name: Get repository information
-      id: repo-info
-      run: echo "::set-output name=repo_info::{\"owner\":\"${{ github.repository_owner }}\", \"repo\":\"${{ github.repository }}\"}"
-      shell: bash
-
-    - name: Get last commit date of file
-      id: last-commit
-      uses: actions/github-script@v4
-      with:
-        script: |
-          const { data: [commit] } = await github.repos.listCommits({
-            owner: ${{ fromJson(steps.repo-info.outputs.repo_info).owner }},
-            repo: ${{ fromJson(steps.repo-info.outputs.repo_info).repo }},
-            path: 'merge/coverage/coveragemerge.es',
-            per_page: 1
-          });
-          return commit.commit.author.date;
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Format last commit date
-      run: echo "The file was last modified on $(echo ${LAST_COMMIT} | date -Iseconds)"
-      env:
-        LAST_COMMIT: ${{ steps.last-commit.outputs.result }}
-
            
     - if: ${{ env.bool == 1}}
       uses: stefanzweifel/git-auto-commit-action@v4
