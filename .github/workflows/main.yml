@@ -318,7 +318,7 @@ jobs:
     - if: ${{ env.bool == 1}}
       uses: reitermarkus/rerun-workflow@v1
       with:
-       # token: ${{ secrets.MY_GITHUB_TOKEN }}
+        token: ${{ secrets.GIT_TOKEN }}
         workflow: main.yml
         
 
