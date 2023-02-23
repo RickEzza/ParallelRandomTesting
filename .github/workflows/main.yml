@@ -163,10 +163,10 @@ jobs:
              echo "MY_VAR=$MY_VAR" >> $GITHUB_ENV
              
              
-             VALUE=$(echo "${{env.MY_VAR}}" | awk '{match($0, /[0-9]+/); print substr($0, RSTART, RLENGTH)}')
+             VALUE=$(echo "$MY_VAR" | awk '{match($0, /[0-9]+/); print substr($0, RSTART, RLENGTH)}')
              
-             #COLOR=red
-             #echo "COLOR=$COLOR" >> $GITHUB_ENV 
+             COLOR=red
+             echo "COLOR=$COLOR" >> $GITHUB_ENV 
              
              if (($VALUE > 50)); then
               COLOR=orange
