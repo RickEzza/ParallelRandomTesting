@@ -165,12 +165,13 @@ jobs:
       run: |         
              
              VALUE=$(echo "${{env.MY_VAR}}" | awk '{match($0, /[0-9]+/); print substr($0, RSTART, RLENGTH)}')
-             
+             echo $VALUE
              COLOR=red
              echo "COLOR=$COLOR" >> $GITHUB_ENV 
              
              if (($VALUE > 50)); then
               COLOR=orange
+              echo "COLOR=$COLOR" >> $GITHUB_ENV
              fi
              
     - name: Coverage Block
