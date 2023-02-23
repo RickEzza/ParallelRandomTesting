@@ -318,7 +318,7 @@ jobs:
     - if: ${{ env.bool == 1}}
       uses: benc-uk/workflow-dispatch@v1
       with:
-        workflow: My Workflow
+        workflow: main.yml
         
 
 
