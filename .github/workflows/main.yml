@@ -164,7 +164,7 @@ jobs:
     - name: Coverage Line color
       run: |         
              
-             VALUE=$(echo "${{env.MYVAR}}" | awk '{match($0, /[0-9]+/); print substr($0, RSTART, RLENGTH)}')
+             VALUE=$(echo "${{env.MY_VAR}}" | awk '{match($0, /[0-9]+/); print substr($0, RSTART, RLENGTH)}')
              
              COLOR=red
              echo "COLOR=$COLOR" >> $GITHUB_ENV 
