@@ -170,7 +170,7 @@ jobs:
              echo "COLOR=$COLOR" >> $GITHUB_ENV 
              
              if (($VALUE > 50)); then
-              COLOR=orange
+              COLOR=yellow
               echo "COLOR=$COLOR" >> $GITHUB_ENV
               if(($VALUE >= 60)); then
                COLOR=green
@@ -191,7 +191,7 @@ jobs:
              echo "COLOR2=$COLOR" >> $GITHUB_ENV 
              
              if (($VALUE > 50)); then
-              COLOR2=orange
+              COLOR2=yellow
               echo "COLOR2=$COLOR2" >> $GITHUB_ENV
               if(($VALUE >= 60)); then
                COLOR2=green
@@ -211,7 +211,7 @@ jobs:
              echo "COLOR3=$COLOR3" >> $GITHUB_ENV 
              
              if (($VALUE > 50)); then
-              COLOR3=orange
+              COLOR3=yellow
               echo "COLOR3=$COLOR3" >> $GITHUB_ENV
               if(($VALUE >= 60)); then
                COLOR3=green
@@ -231,7 +231,7 @@ jobs:
              echo "COLOR4=$COLOR4" >> $GITHUB_ENV 
              
              if (($VALUE > 50)); then
-              COLOR4=orange
+              COLOR4=yellow
               echo "COLOR4=$COLOR4" >> $GITHUB_ENV
               if(($VALUE >= 60)); then
                COLOR4=green
