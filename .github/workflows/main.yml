@@ -308,23 +308,31 @@ jobs:
              echo "bool=$bool" >> $GITHUB_ENV
            fi
            
+    - name: Get repository information
+      id: repo-info
+      run: echo "::set-output name=repo_info::{\"owner\":\"${{ github.repository_owner }}\", \"repo\":\"${{ github.repository }}\"}"
+      shell: bash
+
     - name: Get last commit date of file
       id: last-commit
       uses: actions/github-script@v4
       with:
-          script: |
-            const { data: [commit] } = await github.repos.listCommits({
-              path: 'merge/coverage/coveragemerge.es',
-              per_page: 1
-            });
-            return commit.commit.author.date;
+        script: |
+          const { data: [commit] } = await github.repos.listCommits({
+            owner: ${{ fromJson(steps.repo-info.outputs.repo_info).owner }},
+            repo: ${{ fromJson(steps.repo-info.outputs.repo_info).repo }},
+            path: 'merge/coverage/coveragemerge.es',
+            per_page: 1
+          });
+          return commit.commit.author.date;
       env:
-        GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Format last commit date
       run: echo "The file was last modified on $(echo ${LAST_COMMIT} | date -Iseconds)"
       env:
-          LAST_COMMIT: ${{ steps.last-commit.outputs.result }}
+        LAST_COMMIT: ${{ steps.last-commit.outputs.result }}
+
            
     - if: ${{ env.bool == 1}}
       uses: stefanzweifel/git-auto-commit-action@v4
