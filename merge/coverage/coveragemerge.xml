@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Wed Feb 22 19:43:53 UTC 2023 -->
+<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Thu Feb 23 10:38:26 UTC 2023 -->
 
 <report>
   <stats>
@@ -11,27 +11,27 @@
   <data>
     <all name="all classes">
       <coverage type="class, %" value="100% (11/11)"/>
-      <coverage type="method, %" value="75%  (155/207)"/>
-      <coverage type="block, %" value="53%  (1611/3022)"/>
-      <coverage type="line, %" value="51%  (531.7/1035)"/>
+      <coverage type="method, %" value="74%  (154/207)"/>
+      <coverage type="block, %" value="53%  (1593/3022)"/>
+      <coverage type="line, %" value="51%  (525.7/1035)"/>
 
       <package name="com.werken.saxpath">
         <coverage type="class, %" value="100% (5/5)"/>
-        <coverage type="method, %" value="64%  (92/144)"/>
-        <coverage type="block, %" value="41%  (941/2297)"/>
-        <coverage type="line, %" value="41%  (339.9/830)"/>
+        <coverage type="method, %" value="63%  (91/144)"/>
+        <coverage type="block, %" value="40%  (923/2297)"/>
+        <coverage type="line, %" value="40%  (333.9/830)"/>
 
         <srcfile name="XPathLexer.java">
           <coverage type="class, %" value="100% (1/1)"/>
-          <coverage type="method, %" value="57%  (25/44)"/>
-          <coverage type="block, %" value="39%  (403/1032)"/>
-          <coverage type="line, %" value="38%  (137.1/362)"/>
+          <coverage type="method, %" value="55%  (24/44)"/>
+          <coverage type="block, %" value="37%  (385/1032)"/>
+          <coverage type="line, %" value="36%  (131.1/362)"/>
 
           <class name="XPathLexer">
             <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="57%  (25/44)"/>
-            <coverage type="block, %" value="39%  (403/1032)"/>
-            <coverage type="line, %" value="38%  (137.1/362)"/>
+            <coverage type="method, %" value="55%  (24/44)"/>
+            <coverage type="block, %" value="37%  (385/1032)"/>
+            <coverage type="line, %" value="36%  (131.1/362)"/>
 
             <method name="XPathLexer (): void">
               <coverage type="method, %" value="0%   (0/1)"/>
@@ -57,6 +57,11 @@
               <coverage type="method, %" value="0%   (0/1)"/>
               <coverage type="block, %" value="0%   (0/7)"/>
               <coverage type="line, %" value="0%   (0/2)"/>
+            </method>
+            <method name="div (): Token">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/44)"/>
+              <coverage type="line, %" value="0%   (0/13)"/>
             </method>
             <method name="dollar (): Token">
               <coverage type="method, %" value="0%   (0/1)"/>
@@ -128,10 +133,10 @@
               <coverage type="block, %" value="0%   (0/17)"/>
               <coverage type="line, %" value="0%   (0/6)"/>
             </method>
-            <method name="div (): Token">
+            <method name="operatorName (): Token">
               <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="32%  (14/44)"/>
-              <coverage type="line, %" value="31%  (4/13)"/>
+              <coverage type="block, %" value="50%  (12/24)"/>
+              <coverage type="line, %" value="45%  (5/11)"/>
             </method>
             <method name="nextToken (): Token">
               <coverage type="method, %" value="100% (1/1)"/>
@@ -147,11 +152,6 @@
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="63%  (29/46)"/>
               <coverage type="line, %" value="63%  (12/19)"/>
-            </method>
-            <method name="operatorName (): Token">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="67%  (16/24)"/>
-              <coverage type="line, %" value="64%  (7/11)"/>
             </method>
             <method name="LA (int): char">
               <coverage type="method, %" value="100% (1/1)"/>
