@@ -162,13 +162,19 @@ jobs:
              MY_VAR=$(xmlstarlet sel -t -v "//coverage[@type='line, %']/@value" coveragemerge.xml | head -1)
              echo "MY_VAR=$MY_VAR" >> $GITHUB_ENV
              VALUE=$(echo "${{env.MY_VAR}}" | awk '{match($0, /[0-9]+/); print substr($0, RSTART, RLENGTH)}')
-             if ((VALUE < 70)); then
-              COLOR=red
-              echo "COLOR=$COLOR" >> $GITHUB_ENV
-             else
-              COLOR=green
-              echo "COLOR=$COLOR" >> $GITHUB_ENV   
+             COLOR=red
+             echo "COLOR=$COLOR" >> $GITHUB_ENV 
+             
+             if ((VALUE > 50 && VALUE < 60)); then
+              COLOR=orange
+              echo "COLOR=$COLOR" >> $GITHUB_ENV  
              fi
+             
+             if ((VALUE >= 60)); then
+              COLOR=green
+              echo "COLOR=$COLOR" >> $GITHUB_ENV  
+             fi
+             
     - name: Coverage Block
       run: |
              MY_VAR2=$(xmlstarlet sel -t -v "//coverage[@type='block, %']/@value" coveragemerge.xml | head -1)
@@ -202,7 +208,7 @@ jobs:
         schemaVersion: 2
         label: Coverage Block
         message: ${{ env.MY_VAR2 }}
-        color: green
+        color: ${{ env.COLOR }}
         namedLogo: github
     - name: Create the Badge 3
       uses: schneegans/dynamic-badges-action@v1.0.0
@@ -213,7 +219,7 @@ jobs:
         schemaVersion: 3
         label: Coverage Method
         message: ${{ env.MY_VAR3 }}
-        color: green
+        color: ${{ env.COLOR }}
         namedLogo: github       
     - name: Create the Badge 4
       uses: schneegans/dynamic-badges-action@v1.0.0
@@ -224,7 +230,7 @@ jobs:
         schemaVersion: 4
         label: Coverage Class
         message: ${{ env.MY_VAR4 }}
-        color: red
+        color: ${{ env.COLOR }}
         namedLogo: github
     - name: directory 
       run: |
