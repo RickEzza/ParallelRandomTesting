@@ -190,7 +190,7 @@ jobs:
         schemaVersion: 1
         label: Coverage Line
         message: ${{ env.MY_VAR }}
-        color: green
+        color: ${{ env.COLOR }}
         namedLogo: github
     - name: Create the Badge 2
       uses: schneegans/dynamic-badges-action@v1.0.0
