@@ -8,11 +8,10 @@ GitHub Actions per il testing parallelo randomico di classi java utilizzando ran
 - Carica il file .jar nella repository all' interno della directory "jars".
 - Modifica il file "lista.txt" inserendo il nome delle classi da testare.
 - Modifica lo script main.yml inserendo appositamente il nome del progetto da testare in Emma instr(rigo 46) e in Randoop(rigo 49). 
-- Runnare il workflow manualmente dalla sezione "Action"(se è la prima esecuzione assicurarsi di aver correttamente eliminato la cartella merge/coverage), finchè non si ottiene una coverage soddisfacente, o la stessa si stabilizza.
+- Runnare il workflow manualmente dalla sezione "Action"(se è la prima esecuzione assicurarsi di aver correttamente eliminato la cartella merge/coverage), finchè non   si ottiene una coverage soddisfacente, o la stessa si stabilizza.
 
 
 ## Output
-
 
 L' action genera nella repository la cartella merge/coverage, in cui sono presenti i file di coverage, ottenuti dal merge delle sessioni parallele e il merge con il risultato della precedente esecuzione
 
