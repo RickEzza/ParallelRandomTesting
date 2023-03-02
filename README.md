@@ -23,13 +23,13 @@ Cliccando sugli Artifacts vengono scaricati i .zip.
 
 ## COVERAGE
 
-![Coverage Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/Giovannircc/99488398e05ca4ebe8bddedc60dbc49e/raw/ParallelRandomTesting__.json)
+![Coverage Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/RickEzza/453f6e53d343f9be435c210efb6bd2a2/raw/ParallelRandomTesting__.json)
 
-![Coverage Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/Giovannircc/99488398e05ca4ebe8bddedc60dbc49e/raw/ParallelRandomTesting2__.json)
+![Coverage Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/RickEzza/453f6e53d343f9be435c210efb6bd2a2/raw/ParallelRandomTesting2__.json)
 
-![Coverage Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/Giovannircc/99488398e05ca4ebe8bddedc60dbc49e/raw/ParallelRandomTesting3__.json)
+![Coverage Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/RickEzza/453f6e53d343f9be435c210efb6bd2a2/raw/ParallelRandomTesting3__.json)
 
-![Coverage Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/Giovannircc/99488398e05ca4ebe8bddedc60dbc49e/raw/ParallelRandomTesting4__.json)
+![Coverage Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/RickEzza/453f6e53d343f9be435c210efb6bd2a2/raw/ParallelRandomTesting4__.json)
 
 
 ### Note
