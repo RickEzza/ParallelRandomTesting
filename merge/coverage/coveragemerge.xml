@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Thu Mar 02 22:21:15 UTC 2023 -->
+
+<report>
+  <stats>
+    <packages value="2"/>
+    <classes value="6"/>
+    <methods value="21"/>
+    <srcfiles value="6"/>
+    <srclines value="110"/>
+  </stats>
+  <data>
+    <all name="all classes">
+      <coverage type="class, %" value="100% (6/6)"/>
+      <coverage type="method, %" value="100% (21/21)"/>
+      <coverage type="block, %" value="55%  (358/652)"/>
+      <coverage type="line, %" value="67%  (73.7/110)"/>
+
+      <package name="de.devcity.parseargs">
+        <coverage type="class, %" value="100% (1/1)"/>
+        <coverage type="method, %" value="100% (9/9)"/>
+        <coverage type="block, %" value="49%  (270/552)"/>
+        <coverage type="line, %" value="58%  (48/83)"/>
+
+        <srcfile name="ArgsParser.java">
+          <coverage type="class, %" value="100% (1/1)"/>
+          <coverage type="method, %" value="100% (9/9)"/>
+          <coverage type="block, %" value="49%  (270/552)"/>
+          <coverage type="line, %" value="58%  (48/83)"/>
+
+          <class name="ArgsParser">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (9/9)"/>
+            <coverage type="block, %" value="49%  (270/552)"/>
+            <coverage type="line, %" value="58%  (48/83)"/>
+
+            <method name="parseParameterArgument (String): ParameterArgument">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="27%  (77/282)"/>
+              <coverage type="line, %" value="31%  (11/36)"/>
+            </method>
+            <method name="parseSwitchArgument (String): SwitchArgument">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="52%  (82/159)"/>
+              <coverage type="line, %" value="52%  (11/21)"/>
+            </method>
+            <method name="ArgsParser (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (3/3)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="ArgsParser (String []): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (3/3)"/>
+            </method>
+            <method name="getArgs (): String []">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (3/3)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="getArgsCount (): int">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (4/4)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="getArgsLeftCount (): int">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (19/19)"/>
+              <coverage type="line, %" value="100% (5/5)"/>
+            </method>
+            <method name="parseStringArgument (): List">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (36/36)"/>
+              <coverage type="line, %" value="100% (6/6)"/>
+            </method>
+            <method name="setArgs (String []): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (40/40)"/>
+              <coverage type="line, %" value="100% (8/8)"/>
+            </method>
+          </class>
+        </srcfile>
+      </package>
+      <package name="de.devcity.parseargs.arguments">
+        <coverage type="class, %" value="100% (5/5)"/>
+        <coverage type="method, %" value="100% (12/12)"/>
+        <coverage type="block, %" value="88%  (88/100)"/>
+        <coverage type="line, %" value="95%  (25.7/27)"/>
+
+        <srcfile name="StringArgument.java">
+          <coverage type="class, %" value="100% (1/1)"/>
+          <coverage type="method, %" value="100% (2/2)"/>
+          <coverage type="block, %" value="75%  (12/16)"/>
+          <coverage type="line, %" value="91%  (4.5/5)"/>
+
+          <class name="StringArgument">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="75%  (12/16)"/>
+            <coverage type="line, %" value="91%  (4.5/5)"/>
+
+            <method name="StringArgument (int, String): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="69%  (9/13)"/>
+              <coverage type="line, %" value="89%  (3.5/4)"/>
+            </method>
+            <method name="getValue (): String">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (3/3)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+          </class>
+        </srcfile>
+        <srcfile name="ParameterArgument.java">
+          <coverage type="class, %" value="100% (1/1)"/>
+          <coverage type="method, %" value="100% (2/2)"/>
+          <coverage type="block, %" value="84%  (21/25)"/>
+          <coverage type="line, %" value="93%  (5.6/6)"/>
+
+          <class name="ParameterArgument">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="84%  (21/25)"/>
+            <coverage type="line, %" value="93%  (5.6/6)"/>
+
+            <method name="ParameterArgument (int, String, String): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="82%  (18/22)"/>
+              <coverage type="line, %" value="92%  (4.6/5)"/>
+            </method>
+            <method name="getValue (): String">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (3/3)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+          </class>
+        </srcfile>
+        <srcfile name="KeyArgument.java">
+          <coverage type="class, %" value="100% (1/1)"/>
+          <coverage type="method, %" value="100% (3/3)"/>
+          <coverage type="block, %" value="88%  (29/33)"/>
+          <coverage type="line, %" value="94%  (6.5/7)"/>
+
+          <class name="KeyArgument">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (3/3)"/>
+            <coverage type="block, %" value="88%  (29/33)"/>
+            <coverage type="line, %" value="94%  (6.5/7)"/>
+
+            <method name="KeyArgument (int, String): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="81%  (17/21)"/>
+              <coverage type="line, %" value="91%  (4.5/5)"/>
+            </method>
+            <method name="getKey (): String">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (3/3)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="isLongKey (): boolean">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (9/9)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+          </class>
+        </srcfile>
+        <srcfile name="Argument.java">
+          <coverage type="class, %" value="100% (1/1)"/>
+          <coverage type="method, %" value="100% (3/3)"/>
+          <coverage type="block, %" value="100% (15/15)"/>
+          <coverage type="line, %" value="100% (5/5)"/>
+
+          <class name="Argument">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (3/3)"/>
+            <coverage type="block, %" value="100% (15/15)"/>
+            <coverage type="line, %" value="100% (5/5)"/>
+
+            <method name="Argument (int): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (3/3)"/>
+            </method>
+            <method name="compareTo (Argument): int">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="getPosition (): int">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (3/3)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+          </class>
+        </srcfile>
+        <srcfile name="SwitchArgument.java">
+          <coverage type="class, %" value="100% (1/1)"/>
+          <coverage type="method, %" value="100% (2/2)"/>
+          <coverage type="block, %" value="100% (11/11)"/>
+          <coverage type="line, %" value="100% (4/4)"/>
+
+          <class name="SwitchArgument">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="100% (11/11)"/>
+            <coverage type="line, %" value="100% (4/4)"/>
+
+            <method name="SwitchArgument (int, String, boolean): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (8/8)"/>
+              <coverage type="line, %" value="100% (3/3)"/>
+            </method>
+            <method name="isSet (): boolean">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (3/3)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+          </class>
+        </srcfile>
+      </package>
+    </all>
+  </data>
+</report>
